@@ -2,7 +2,7 @@
 A tool available to legal practitioners to generate high-quality summaries/headnotes of Indian legal court judgements. 
 
 ## Trained Model
-Available on [Hugging Face](https://huggingface.co/mihikabairathi/llama-indian-court-headnotes) and [Fireworks AI](https://app.fireworks.ai/models/mihikabairathi/llama-indian-court-headnotes)
+Available on [Hugging Face](https://huggingface.co/mihikabairathi/merged-llama-indian-court-headnotes)
 
 ## Citations
 The original dataset was obtained from the following papers:
