@@ -31,12 +31,12 @@ It is a [Llama 3.1 8B Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-I
 - I came up with a basic rubric that highlighted the key components and requirements of a good headnote. Using in-context learning methods, I had an open-source LLM output True/False assignments to rubric components for each headnote, and then with some post-processing I assigned each headnote a label - poor, medium, or great. 
 
 ### Step 3: Fine-Tuning
-- After filtering and oversampling headnotes in the dataset, I worked with various open-source LLMs and parameters and fine-tuned different models using the PEFT technique QLoRA.
+- After filtering and oversampling headnotes in the dataset, I worked with various open-source LLMs (Qwen, Llama, Mistral families) and parameters (LoRA parameters, batch size, learning rate, epochs) and fine-tuned different models using the PEFT technique QLoRA.
 - I evaluated model performances using cross-entropy loss, Rouge, and BERT scores, before picking a final model. 
 
 ### Step 4: Inference
 - After picking the best model configuration and generation technique, I merged the LoRA weights with the original model, and uploaded a final model to Hugging Face. 
-- I wrote a script that can run the model anywhere by downloading it from Hugging Face.
+- I wrote a script that can run the model anywhere by downloading it from Hugging Face. I picked beam search as the generation technique over greedy search or sampling. 
 
 ## Future Possibilities
 - Deploy online for easy usage, using persistent GPU resources. 
